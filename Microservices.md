@@ -14,4 +14,11 @@ Spring boot is a java based framework which helps in building Microservices.
 - Co-ordirnating changes with other microservices teams.
 - Operational Overheads with an increase in no. of processes.
 
+#### Multi-tenant architecture, why would you use one?
+- It is a model where in any tenant can be served by any compute node.
+- They enable horizontal auto-scaling, enhanced resilience, and zero-downtime upgrades
+
+##### How can you connect customers to their data in a multi-tenant architecture, if every customer has their own database?
+By introuducing a lookup-table that looks up tenant configuration based on a unique id, like hostname
+
 #### Netflix Eureka
