@@ -34,3 +34,16 @@ By introuducing a lookup-table that looks up tenant configuration based on a uni
 - When using client‑side discovery, the client is responsible for determining the network locations of available service instances and load balancing requests across them. The client queries a service registry, which is a database of available service instances. The client then uses a load‑balancing algorithm to select one of the available service instances and makes a request.
 
 - Netflix Eureka is good example of a service registry. It provides a REST API for registering and querying service instances. A service instance registers its network location using a POST request. Every 30 seconds it must refresh its registration using a PUT request. A registration is removed by either using an HTTP DELETE request or by the instance registration timing out. As you might expect, a client can retrieve the registered service instances by using an HTTP GET request.
+
+### CLOUD DESIGN PATTERNS
+
+##### Strangler Fig pattern
+
+Incrementally migrate a legacy system by gradually replacing specific pieces of functionality with new applications and services. As features from the legacy system are replaced, the new system eventually replaces all of the old system's features, strangling the old system and allowing you to decommission it.
+
+https://docs.microsoft.com/en-us/azure/architecture/patterns/strangler-fig
+https://martinfowler.com/bliki/StranglerFigApplication.html
+
+
+
+
